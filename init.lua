@@ -5,6 +5,10 @@ if(not vim.g.vscode)
     require("basic.colorscheme")
 end
 
+if(vim.g.vscode)
+  then
+    require("basic.vscode-keybinds")
+end
 require("basic.settings")
 require("basic.keybinds")
 

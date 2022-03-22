@@ -37,6 +37,18 @@ packer.startup(
 --                    require("conf.catppuccin")
 --                end
 --            }
+            -- 模糊查找
+            use {
+                "nvim-telescope/telescope.nvim",
+                requires = {
+                    "nvim-lua/plenary.nvim", -- Lua 开发模块
+                    "BurntSushi/ripgrep", -- 文字查找
+                    "sharkdp/fd" -- 文件查找
+                },
+                config = function()
+                    require("conf.telescope")
+                end
+            }
             -- 显示缩进线
             use {
                 "lukas-reineke/indent-blankline.nvim",
@@ -119,6 +131,13 @@ packer.startup(
                     require("conf.nvim-cmp")
                 end
             }
+            -- 扩展 LSP 诊断
+--            use {
+--                "mfussenegger/nvim-lint",
+--                config = function()
+--                    require("conf.nvim-lint")
+--                end
+--            }
             -- 代码格式化
             use {
                 "sbdchd/neoformat",
