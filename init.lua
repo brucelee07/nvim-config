@@ -11,5 +11,6 @@ if(vim.g.vscode)
 end
 require("basic.settings")
 require("basic.keybinds")
+require("conf.null-ls")
 
 

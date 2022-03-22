@@ -138,7 +138,7 @@ packer.startup(
 --                    require("conf.nvim-lint")
 --                end
 --            }
-            -- 代码格式化
+            use{"jose-elias-alvarez/null-ls.nvim"}            -- 代码格式化
             use {
                 "sbdchd/neoformat",
                 config = function()
