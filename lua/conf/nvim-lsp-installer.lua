@@ -38,8 +38,8 @@ local function attach(_, bufnr)
     vim.keybinds.bmap(
         bufnr,
         "n",
-        "<C-p>",
-        "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>",
+        "<c-p>",
+        "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<cr>",
         vim.keybinds.opts
     )
     -- 悬浮窗口下翻页，由 Lspsaga 提供
@@ -50,6 +50,7 @@ local function attach(_, bufnr)
         "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>",
         vim.keybinds.opts
     )
+
 end
 -- 自动安装或启动 LanguageServers
 for server_name, server_options in pairs(servers) do

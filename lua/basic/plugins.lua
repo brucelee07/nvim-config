@@ -132,12 +132,27 @@ packer.startup(
                 end
             }
             -- 扩展 LSP 诊断
---            use {
---                "mfussenegger/nvim-lint",
---                config = function()
---                    require("conf.nvim-lint")
---                end
---            }
+           -- use {
+           --     "mfussenegger/nvim-lint",
+           --     config = function()
+           --         require("conf.nvim-lint")
+           --     end
+           -- }
+            ---- 键位绑定器
+            use {
+                "folke/which-key.nvim",
+                config = function()
+                    require("conf.which-key")
+                end
+            }
+            -- 代码注释
+            use {
+                "numToStr/Comment.nvim",
+                config = function()
+                    require("conf.Comment")
+                end
+            }
+
             use{"jose-elias-alvarez/null-ls.nvim"}            -- 代码格式化
             use {
                 "sbdchd/neoformat",

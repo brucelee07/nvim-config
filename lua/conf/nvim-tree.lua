@@ -3,6 +3,7 @@ require("nvim-tree").setup(
     {
         -- 自动关闭
         auto_close = true,
+        auto_reload_on_write = true,
         -- 视图
         view = {
             -- 宽度
@@ -12,11 +13,12 @@ require("nvim-tree").setup(
             -- 隐藏顶部的根目录显示
             hide_root_folder = false,
             -- 自动调整大小
-            auto_resize = true
+            auto_resize = true,
+            side = "right"
         },
         diagnostics = {
             -- 是否启用文件诊断信息
-            enable = true,
+            enable = false,
             icons = {
                 hint = "",
                 info = "",

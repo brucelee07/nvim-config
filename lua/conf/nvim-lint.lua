@@ -2,7 +2,7 @@
 -- WARN: nvim-lint 手动下载诊断工具，确保该诊断工具能被全局调用
 -- pip3 install pylint
 require("lint").linters_by_ft = {
-    python = {"pylint"}
+    -- python = {"pylint"}
     -- javascript = {"eslint"},
     -- typescript = {"eslint"},
     -- go = {"golangcilint"}

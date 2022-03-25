@@ -20,8 +20,29 @@ keymap('n', 'L', '5l', {})
 keymap('n', 'H', '5h', {})
 keymap('i', 'jj', '<ESC>', {})
 keymap('i', 'jk', '<ESC>', {})
+local opts = { noremap = true, silent = true }
+-- Normal --
+-- Better window navigation
+keymap("n", "<C-h>", "<C-w>h", opts)
+keymap("n", "<C-j>", "<C-w>j", opts)
+keymap("n", "<C-k>", "<C-w>k", opts)
+keymap("n", "<C-l>", "<C-w>l", opts)
+-- Move text up and down
+--keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
+--keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+---- Move text up and down
+--keymap("v", "<A-j>", ":m .+1<CR>==", opts)
+--keymap("v", "<A-k>", ":m .-2<CR>==", opts)
+--keymap("v", "p", '"_dP', opts)
+--
+---- Visual Block --
+---- Move text up and down
+--keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
+--keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
+--keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
+--keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
-local opts = {noremap = true}
+--local opts = {noremap = true}
 keymap('n', '<c-j>', '<c-w>j', opts)
 --keymap('n', '<space>', ':call VSCodeNotify("whichkey.show")', opts)
 
