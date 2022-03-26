@@ -145,6 +145,14 @@ packer.startup(
                     require("conf.which-key")
                 end
             }
+            --- pretter html js
+            -- use {
+            --     "MunifTanjim/prettier.nvim",
+            --     config = function()
+            --         require("conf.prettier")
+            --     end
+            -- }
+
             -- 代码注释
             use {
                 "numToStr/Comment.nvim",
