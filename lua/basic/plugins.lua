@@ -162,13 +162,21 @@ packer.startup(
             }
 
             use{"jose-elias-alvarez/null-ls.nvim"}            -- 代码格式化
+            -- gitsigns
             use {
-                "sbdchd/neoformat",
-                config = function()
-                    require("conf.neoformat")
-                end
+              'lewis6991/gitsigns.nvim',
+              config = function()
+                require('gitsigns').setup()
+              end
             }
-           use{"folke/tokyonight.nvim"} 
+           --  use {
+           --      "sbdchd/neoformat",
+           --      config = function()
+           --          require("conf.neoformat")
+           --      end
+           --  }
+           --
+           -- use{"folke/tokyonight.nvim"} 
             -- 安装其它插件
         end,
         -- 使用浮动窗口

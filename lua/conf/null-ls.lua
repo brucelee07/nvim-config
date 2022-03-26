@@ -17,4 +17,16 @@ null_ls.setup({
 		formatting.stylua,
                 diagnostics.flake8
 	},
+        -- 保存的时候format
+        -- on_attach = function(client)
+        --     if client.resolved_capabilities.document_formatting then
+        --         vim.cmd([[
+        --         augroup LspFormatting
+        --             autocmd! * <buffer>
+        --             -- 设置时间2000
+        --             autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil, 2000)
+        --         augroup END
+        --         ]])
+        --     end
+        -- end,
 })

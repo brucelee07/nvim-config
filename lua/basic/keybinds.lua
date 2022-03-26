@@ -46,7 +46,8 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 keymap('n', '<c-j>', '<c-w>j', opts)
 --keymap('n', '<space>', ':call VSCodeNotify("whichkey.show")', opts)
 
-vim.keybinds.gmap("n", "F", "<cmd>lua vim.lsp.buf.formatting_sync()<CR>", vim.keybinds.opts)    
+-- 设置format timeout 2000
+vim.keybinds.gmap("n", "F", "<cmd>lua vim.lsp.buf.formatting_sync(nil, 2000)<CR>", vim.keybinds.opts)    
 -- 插入模下 jj 退出插入模式    
 vim.keybinds.gmap("i", "jj", "<Esc>", vim.keybinds.opts)    
 vim.keybinds.gmap("c", "<C-j>", "<C-n>", {noremap = false})    
