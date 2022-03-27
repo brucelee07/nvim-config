@@ -15,7 +15,8 @@ null_ls.setup({
 		-- formatting.black.with({ extra_args = { "--fast" } }),
                 formatting.yapf,
 		formatting.stylua,
-                diagnostics.flake8
+                diagnostics.flake8,
+                diagnostics.mypy
 	},
         -- 保存的时候format
         -- on_attach = function(client)

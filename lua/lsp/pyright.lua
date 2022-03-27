@@ -12,7 +12,7 @@ return {
     settings = {
         python = {
             analysis = {
-                typeCheckingMode = "basic", --false
+                typeCheckingMode = "true", --false
                 autoSearchPaths = true,
                 useLibraryCodeForTypes = true,
                 diagnosticMode = "openFilesOnly",
