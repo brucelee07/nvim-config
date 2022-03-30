@@ -46,6 +46,8 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 keymap('n', '<c-j>', '<c-w>j', opts)
 --keymap('n', '<space>', ':call VSCodeNotify("whichkey.show")', opts)
 
+--markdown 
+vim.keybinds.gmap("n", "mv", "<cmd>Glow<CR>", vim.keybinds.opts)
 -- 设置format timeout 2000
 vim.keybinds.gmap("n", "F", "<cmd>lua vim.lsp.buf.formatting_sync(nil, 2000)<CR>", vim.keybinds.opts)    
 -- 插入模下 jj 退出插入模式    
@@ -55,7 +57,7 @@ vim.keybinds.gmap("c", "<C-k>", "<C-p>", {noremap = false})
     
 -- 用 H 和 L 代替 ^ 与 $    
 vim.keybinds.gmap("n", "H", "^", vim.keybinds.opts)    
-vim.keybinds.gmap("n", "nn", "i<ESC>", vim.keybinds.opts)    
+-- vim.keybinds.gmap("n", "nn", "i<ESC>", vim.keybinds.opts)    
 vim.keybinds.gmap("n", "<CR>", "o<ESC>k", vim.keybinds.opts)    
 vim.keybinds.gmap("n", "N", "J", vim.keybinds.opts)    
 vim.keybinds.gmap("v", "H", "^", vim.keybinds.opts)    
@@ -63,7 +65,7 @@ vim.keybinds.gmap("n", "L", "$", vim.keybinds.opts)
 vim.keybinds.gmap("v", "L", "$", vim.keybinds.opts)    
 vim.keybinds.gmap("v", "J", "5j", vim.keybinds.opts)    
 vim.keybinds.gmap("v", "K", "5k", vim.keybinds.opts)    
-vim.keybinds.gmap("v", "nn", "<ESC>", vim.keybinds.opts)    
+vim.keybinds.gmap("v", "mm", "<ESC>", vim.keybinds.opts)    
     
 -- 将 C-u 和 C-d 调整为上下滑动 10 行而不是半页    
 vim.keybinds.gmap("n", "<C-u>", "10k", vim.keybinds.opts)    

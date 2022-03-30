@@ -169,6 +169,8 @@ packer.startup(
                 require('gitsigns').setup()
               end
             }
+            -- markdown preview
+            use {"ellisonleao/glow.nvim"}
            --  use {
            --      "sbdchd/neoformat",
            --      config = function()
