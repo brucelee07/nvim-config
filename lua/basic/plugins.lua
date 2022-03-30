@@ -3,6 +3,7 @@
 -- https://github.com/wbthomason/packer.nvim
 local packer = require("packer")
 
+
 packer.startup(
     {
         -- 所有插件的安装都书写在 function 中
@@ -26,7 +27,17 @@ packer.startup(
                     require("conf.nvim-tree")
                 end
             }
-
+            -- 语法高亮
+            use {
+                "nvim-treesitter/nvim-treesitter",
+                -- run = {":TSupdate"},
+                -- requires = {
+                --     "p00f/nvim-ts-rainbow" -- 彩虹括号
+                -- },
+                config = function()
+                    require("conf.nvim-treesitter")
+                end
+            }
             -- 优秀的暗色主题
 --            use {
 --                "catppuccin/nvim",

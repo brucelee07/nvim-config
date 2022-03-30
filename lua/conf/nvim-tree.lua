@@ -2,7 +2,7 @@
 require("nvim-tree").setup(
     {
         -- 自动关闭
-        auto_close = true,
+        auto_close = false,
         auto_reload_on_write = true,
         -- 视图
         view = {
