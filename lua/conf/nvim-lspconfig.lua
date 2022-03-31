@@ -3,6 +3,7 @@
 -- 诊断样式定制
 vim.diagnostic.config(
     {
+        --
         -- 诊断的虚拟文本
         -- virtual_text = {
         --     -- 显示的前缀，可选项：'●', '▎', 'x'
