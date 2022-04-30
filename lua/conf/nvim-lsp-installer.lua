@@ -7,9 +7,10 @@ local servers = {
     -- 语言服务器名称：配置选项
      --sumneko_lua = require("lsp.sumneko_lua"),
        pyright = require("lsp.pyright"),
-       -- tsserver = require("lsp.tsserver"),
-       -- html = require("lsp.html"),
-    -- cssls = require("lsp.cssls"),
+       tsserver = require("lsp.tsserver"),
+       html = require("lsp.html"),
+       -- cssls = require("lsp.cssls"),
+       clangd = require("lsp.clangd"),
     -- gopls = require("lsp.gopls"),
     -- jsonls = require("lsp.jsonls"),
     -- zeta_note = require("lsp.zeta_note"),
@@ -30,6 +31,7 @@ local function attach(_, bufnr)
     vim.keybinds.bmap(bufnr, "n", "<leader>cn", "<cmd>Lspsaga rename<CR>", vim.keybinds.opts)
     -- 查看帮助信息（代替内置 LSP 的窗口，Lspsaga 让查看帮助信息更美观）
     vim.keybinds.bmap(bufnr, "n", "gh", "<cmd>Lspsaga hover_doc<CR>", vim.keybinds.opts)
+    vim.keybinds.bmap(bufnr, "n", "gv", "<cmd>Lspsaga show_cursor_diagnostics<CR>", vim.keybinds.opts)
     -- 跳转到上一个问题（代替内置 LSP 的窗口，Lspsaga 让跳转问题更美观）
     vim.keybinds.bmap(bufnr, "n", "g[", "<cmd>Lspsaga diagnostic_jump_prev<CR>", vim.keybinds.opts)
     -- 跳转到下一个问题（代替内置 LSP 的窗口，Lspsaga 让跳转问题更美观）

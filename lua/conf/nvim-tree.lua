@@ -16,6 +16,11 @@ require("nvim-tree").setup(
             auto_resize = true,
             side = "right"
         },
+        filters = {
+             dotfiles = true,
+             custom = {},
+             exclude = {},
+        },
         diagnostics = {
             -- 是否启用文件诊断信息
             enable = false,

@@ -7,9 +7,9 @@ context_commentstring = {
 require("nvim-treesitter.configs").setup(
     {
         -- 安装的高亮支持来源
-        ensure_installed = "maintained",
+        ensure_installed = "all",
         -- 同步下载高亮支持
-        sync_install = false,
+        sync_install = true,
         -- 高亮相关
         highlight = {
             -- 启用高亮支持
@@ -22,9 +22,9 @@ require("nvim-treesitter.configs").setup(
             enable = true,
             keymaps = {
                 -- 初始化选择
-                init_selection = "<C-CR>",
+                init_selection = "<leader><CR>",
                 -- 递增
-                node_incremental = "<C-CR>",
+                node_incremental = "<leader><CR>",
                 -- 递减
                 node_decremental = "<BS>",
                 -- 选择一个范围
