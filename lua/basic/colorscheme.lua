@@ -1,4 +1,4 @@
-local colorscheme = "gruvbox"
+local colorscheme = "gruvbox-material"
 -- tokyonight
 -- OceanicNext
 -- gruvbox

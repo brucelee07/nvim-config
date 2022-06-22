@@ -120,9 +120,18 @@ packer.startup(
                 end
             }
             use{
+              "sainnhe/gruvbox-material",
+              requires = {"rktjmp/lush.nvim"}
+            }
+            use{
               "ellisonleao/gruvbox.nvim",
               requires = {"rktjmp/lush.nvim"}
-            }            -- 自动代码补全系列插件
+            }
+            -- use {
+            --   "sainnhe/everforest",
+            -- }
+            -- 自动代码补全系列插件
+
             use {
                 "hrsh7th/nvim-cmp",  -- 代码补全核心插件，下面都是增强补全的体验插件
                 requires = {
@@ -173,13 +182,14 @@ packer.startup(
             }
 
             use{"jose-elias-alvarez/null-ls.nvim"}            -- 代码格式化
+
             -- gitsigns
-            use {
-              'lewis6991/gitsigns.nvim',
-              config = function()
-                require('gitsigns').setup()
-              end
-            }
+            -- use {
+            --   'lewis6991/gitsigns.nvim',
+            --   config = function()
+            --     require('gitsigns').setup()
+            --   end
+            -- }
             -- markdown preview
             use {"ellisonleao/glow.nvim"}
            --  use {

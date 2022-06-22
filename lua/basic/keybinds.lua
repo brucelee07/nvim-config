@@ -52,8 +52,8 @@ vim.keybinds.gmap("n", "mv", "<cmd>Glow<CR>", vim.keybinds.opts)
 vim.keybinds.gmap("n", "F", "<cmd>lua vim.lsp.buf.formatting_sync(nil, 2000)<CR>", vim.keybinds.opts)    
 -- 插入模下 jj 退出插入模式    
 vim.keybinds.gmap("i", "jj", "<Esc>", vim.keybinds.opts)    
-vim.keybinds.gmap("c", "<C-j>", "<C-n>", {noremap = false})    
-vim.keybinds.gmap("c", "<C-k>", "<C-p>", {noremap = false})    
+-- vim.keybinds.gmap("c", "<C-j>", "<C-n>", {noremap = false})    
+-- vim.keybinds.gmap("c", "<C-k>", "<C-p>", {noremap = false})    
     
 -- 用 H 和 L 代替 ^ 与 $    
 vim.keybinds.gmap("n", "H", "^", vim.keybinds.opts)    
@@ -89,9 +89,9 @@ vim.keybinds.gmap("n", "<ESC>", ":nohlsearch<CR>", vim.keybinds.opts)
 -- 通过 leader cs 切换拼写检查    
 vim.keybinds.gmap("n", "<leader>cs", "<cmd>set spell!<CR>", vim.keybinds.opts) 
 
-vim.bo.expandtab = true
-vim.bo.shiftwidth = 4
-vim.bo.softtabstop = 4
+-- vim.bo.expandtab = true
+-- vim.bo.shiftwidth = 4
+-- vim.bo.softtabstop = 4
 
 
 vim.wo.number = true

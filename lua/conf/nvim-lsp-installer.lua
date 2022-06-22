@@ -17,8 +17,23 @@ local servers = {
     -- sqls = require("lsp.sqls"),
     -- vuels = require("lsp.vuels")
 }
+
+local lsp_formatting = function(bufnr)
+    vim.lsp.buf.format({
+        filter = function(client)
+            -- apply whatever logic you want (in this example, we'll only use null-ls)
+            return client.name == "null-ls"
+        end,
+        bufnr = bufnr,
+    })
+end
+
+-- if you want to set up formatting on save, you can use this as a callback
+-- local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+
 -- 这里是 LSP 服务启动后的按键加载
-local function attach(_, bufnr)
+local function attach(client, bufnr)
+
     -- 跳转到定义（代替内置 LSP 的窗口，telescope 插件让跳转定义更方便）
     vim.keybinds.bmap(bufnr, "n", "gd", "<cmd>Telescope lsp_definitions theme=dropdown<CR>", vim.keybinds.opts)
     -- 列出光标下所有引用（代替内置 LSP 的窗口，telescope 插件让查看引用更方便）
@@ -40,7 +55,7 @@ local function attach(_, bufnr)
     vim.keybinds.bmap(
         bufnr,
         "n",
-        "<c-p>",
+        "<C-n>",
         "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<cr>",
         vim.keybinds.opts
     )
@@ -48,7 +63,7 @@ local function attach(_, bufnr)
     vim.keybinds.bmap(
         bufnr,
         "n",
-        "<C-n>",
+        "<C-p>",
         "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>",
         vim.keybinds.opts
     )
@@ -63,7 +78,7 @@ for server_name, server_options in pairs(servers) do
         server:on_ready(
             function()
                 -- keybind
-                server_options.on_attach = attach
+		server_options.on_attach = attach
                 -- options config
                 server_options.flags = {
                     debounce_text_changes = 150

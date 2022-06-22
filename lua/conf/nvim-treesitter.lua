@@ -15,7 +15,8 @@ require("nvim-treesitter.configs").setup(
             -- 启用高亮支持
             enable = true,
             -- 使用 treesitter 高亮而不是 neovim 内置的高亮
-            additional_vim_regex_highlighting = true
+            additional_vim_regex_highlighting = true,
+	    disable = { "lua", "rust" },
         },
         -- 范围选择
         incremental_selection = {

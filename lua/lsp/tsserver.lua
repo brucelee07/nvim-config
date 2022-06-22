@@ -1,9 +1,16 @@
 return {
-    handlers = {
-        ["textDocument/documentFormatting"] = function(...)
-        end
+    cmd = {"typescript-language-server", "--stdio"},
+    init_options = {
+        hostInfo = "neovim",
+        -- preferences = {
+        --     baseIndentSize = 2,
+        --     indentSize = 2,
+        -- }
     },
-    settings = {
-        documentFormatting = false
-    }
+    root_dir = function()
+        return vim.fn.getcwd()
+    end
+    -- on_attach = function(client, bufnr)
+    --   common_on_attach(client, bufnr)
+    -- end
 }

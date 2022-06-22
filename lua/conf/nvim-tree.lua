@@ -2,7 +2,7 @@
 require("nvim-tree").setup(
     {
         -- 自动关闭
-        auto_close = false,
+        -- auto_close = false,
         auto_reload_on_write = true,
         -- 视图
         view = {
@@ -13,7 +13,7 @@ require("nvim-tree").setup(
             -- 隐藏顶部的根目录显示
             hide_root_folder = false,
             -- 自动调整大小
-            auto_resize = true,
+            -- auto_resize = true,
             side = "right"
         },
         filters = {
@@ -31,6 +31,10 @@ require("nvim-tree").setup(
                 error = ""
             }
         },
+        -- open_file = {
+        --   quit_on_open = true,
+        --   resize_window = true,
+        -- },
         git = {
             -- 是否启用 git 信息
             enable = true,
